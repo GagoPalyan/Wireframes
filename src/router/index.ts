@@ -31,7 +31,7 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   const token = Cookies.get('accessToken');
 
   if (to.meta.requiresAuth && !token) {
