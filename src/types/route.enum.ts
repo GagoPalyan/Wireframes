@@ -1,7 +1,7 @@
 export const RouteEnum = {
-	HOME: '/Wireframes/',
-	LOGIN: '/Wireframes/login',
-	REGISTER: '/Wireframes/register',
+	HOME: '/',
+	LOGIN: '/login',
+	REGISTER: '/register',
 } as const;
 
 export type RouteEnum = (typeof RouteEnum)[keyof typeof RouteEnum];
