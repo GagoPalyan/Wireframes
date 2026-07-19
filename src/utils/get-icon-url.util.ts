@@ -1,5 +1,7 @@
 const getIconUrl = (icon?: string) => {
-	return icon ? `url("/Wireframes/icons/${icon}.svg")` : '';
+	if (!icon) return '';
+
+	return `url('${new URL(`../assets/icons/${icon}.svg`, import.meta.url).href}')`;
 };
 
 export { getIconUrl };
